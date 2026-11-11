@@ -26,9 +26,19 @@ icon drawing and any components only it uses.
 
 ## Using it
 
-The apps depend on it by local path, so it must be checked out where their
-`Package.swift` expects it (next to Intercept; two levels up from One Tap
-Transcribe's `app` folder).
+Add it to an app's `Package.swift`:
+
+```swift
+.package(url: "https://github.com/jammastergirish/GraphiteEmber.git", from: "1.0.0")
+```
+
+and `.product(name: "GraphiteEmber", package: "GraphiteEmber")` to the app
+target. The app's wrapper scripts ask SwiftPM where the package is checked out
+and run the scripts in its `Scripts/` folder.
+
+To change the package and an app together, run
+`swift package edit GraphiteEmber --path ../GraphiteEmber` in the app; SwiftPM
+then uses your local copy until `swift package unedit GraphiteEmber`.
 
 ```bash
 swift test   # checks the date and length labels
