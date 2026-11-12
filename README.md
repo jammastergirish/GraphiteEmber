@@ -10,6 +10,9 @@ Intercept, plus the scripts that build and release them.
 - `Components.swift`: `StatusBadge`, `LogoSquircle` (each app passes its own
   mark), `EmberSpinner`, `GraphiteButtonStyle`, `WindowTitleBar`,
   `MenuPanelHeader`, `MenuRow` and `NoticeBanner`.
+- `Controls.swift`: `CheckSquare` and `EmberCheckboxStyle` (checkboxes),
+  `ChipGroup` with `SegmentPicker` (pick one) and `ToggleChip` (tick any
+  combination), `OptionMenu` (a drop-down), and `EmberLinkButtonStyle`.
 - `TableCard.swift`: the rounded card the apps use for their lists. Short lists
   draw their rows directly; long ones scroll. `tableRowHover(_:)` gives a row
   the ember hover tint.
